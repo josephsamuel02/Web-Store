@@ -6,8 +6,8 @@ import { Button1 } from "./Button";
 
 const PublicPagesNav = () => {
 	const navLinks = [
-		{ name: "Contact Us", link: PUBROUTES.SERVICES },
-		{ name: "About", link: PUBROUTES.CONTACTUS },
+		{ name: "Contact Us", link: "" },
+		{ name: "About", link: "" },
 	];
 
 	const [sideNav, setSideNav] = useState(false);
