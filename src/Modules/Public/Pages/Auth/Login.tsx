@@ -39,10 +39,14 @@ const Login = () => {
 						>
 							Login
 						</button>
-
+						<p className="mx-auto    text-base text-thin text-slate-700">
+							<a href={"#"} className="mx-auto px-2  text-sm text-blue-800">
+								Forget password
+							</a>
+						</p>
 						<p className="mx-auto my-3 text-base text-thin text-slate-700">
-							Don't have an account?{" "}
-							<a href={PUBROUTES.SIGNUP} className="mx-auto text-base  text-blue-800">
+							Don't have an account?
+							<a href={PUBROUTES.SIGNUP} className="mx-auto px-2 text-base  text-blue-800">
 								Sign Up
 							</a>
 						</p>

@@ -7,7 +7,7 @@ const SignUp = () => {
 		<div className="w-full h-auto ">
 			<PublicPagesNav />
 			<div className="w-full h-auto mt-10 pt-5 flex flex-col md:flex-row items-center bg-green-300  ">
-				<div className=" mx-auto py-0 h-auto w-auto md:w-1/2">
+				<div className=" mx-auto py-16 h-auto w-auto md:w-1/2">
 					<form
 						action=""
 						className="mx-6 p-10 md:w-96 flex flex-col bg-white rounded-md shadow-xl "
@@ -57,9 +57,9 @@ const SignUp = () => {
 							Register
 						</button>
 
-						<p className="mx-auto my-3 text-base text-thin text-slate-700">
+						<p className="mx-auto  my-3 text-base text-thin text-slate-700">
 							Already have an account?
-							<a href={PUBROUTES.LOGIN} className="mx-auto text-base  text-blue-800">
+							<a href={PUBROUTES.LOGIN} className="mx-auto px-2  text-base text-blue-800">
 								Login
 							</a>
 						</p>

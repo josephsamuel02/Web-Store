@@ -5,20 +5,18 @@ const PUBROUTES = {
 
 	DASHBOARD: "/dashboard",
 	MAINMENUE: "/dashboard/menue",
-	ACCOUNTPROFILE: "/dashboard/account",
-	CLIENTSPRODUCTPAGE: "/dashboard/my_packs",
 	PREFERENCEREQUEST: "/dashboard/custom_request",
 	CLIENTS_ADD_ONS: "/dashboard/add_ons",
-	CLIENTS_WEBSITETEMPLATES: "/dashboard/clients_website_templates",
-	CLIENT_SERVICES: "/dashboard/services",
-	FUND_WALET: "dashboard/payment",
+	ACCOUNTPROFILE: "/dashboard/account",
+	BUY_PACK: "/dashboard/buy_pack",
+
 	CUSTOMERCARE: "/dashboard/customer_care",
 	INVITES: "/dashboard/invites",
+	MANAGE_STORE: "/dashboard/manage_store",
 
-	BUY_PACK: "/buy_pack",
+	FUND_WALLET: "dashboard/payment",
 	PRODUCTS: "/products",
-	SERVICES: "/services",
-	SINGLEPRODUCTPGE: "/pack_info",
+
 	WEBSITESAMPLES: "/website_samples",
 
 	ABOUTUS: "/about",

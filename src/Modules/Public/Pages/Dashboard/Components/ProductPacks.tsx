@@ -1,15 +1,18 @@
-import { MdWifiTethering, MdStore, MdOutlineInsertChart, MdSms } from "react-icons/md";
-
+import { GoBookmark } from "react-icons/go";
+import { MdStore, MdOutlineInsertChart, MdWifiTethering, MdSms } from "react-icons/md";
 import { SiWhatsapp, SiGmail } from "react-icons/si";
 import { TbCurrencyNaira } from "react-icons/tb";
-import { GoBookmark } from "react-icons/go";
+import PUBROUTES from "../../../PublicRoutes";
 
 const ProductsPacks = () => {
 	return (
 		<div className="m-0 pb-12 w-full h-auto bg-white bg-gradient-to-t from-green-200 rounded-3xl">
 			<div className="mx-auto py-24 p-5 w-full h-auto flex flex-col lg:flex-row">
 				<div className="w-full mx-auto flex flex-col md:flex-row flex-wrap items-center">
-					<div className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-56 h-auto flex flex-col bg-white  border-y-8 border-y-green-300 rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300">
+					<a
+						className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-56 h-auto flex flex-col bg-white  border-y-8 border-y-green-300 rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300"
+						href={`${PUBROUTES.BUY_PACK}/0`}
+					>
 						<h3 className="mx-auto my-3 text-center text-xl text-slate-600 font-courgette font-bold">
 							Mini Pack
 						</h3>
@@ -49,8 +52,11 @@ const ProductsPacks = () => {
 							</span>
 							5,000
 						</p>
-					</div>
-					<div className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-60 h-auto flex flex-col bg-white  border-y-8 border-y-green-500 rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300">
+					</a>
+					<a
+						className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-60 h-auto flex flex-col bg-white  border-y-8 border-y-green-500 rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300"
+						href={`${PUBROUTES.BUY_PACK}/1`}
+					>
 						<h3 className="mx-auto my-3 text-center text-xl text-slate-600 font-courgette font-bold">
 							Starter Pack
 						</h3>
@@ -95,9 +101,12 @@ const ProductsPacks = () => {
 							</span>
 							10,000
 						</p>
-					</div>
+					</a>
 
-					<div className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-60 h-auto flex flex-col bg-white  border-y-8 border-y-tabGreen rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300">
+					<a
+						className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-60 h-auto flex flex-col bg-white  border-y-8 border-y-tabGreen rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300"
+						href={`${PUBROUTES.BUY_PACK}/2`}
+					>
 						<h3 className="mx-auto my-3 text-center text-xl text-slate-600 flex flex-row font-courgette font-bold items-center">
 							Business Pack
 							<span className="mx-1">
@@ -150,8 +159,12 @@ const ProductsPacks = () => {
 							</span>
 							40,000
 						</p>
-					</div>
-					<div className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-60 h-auto flex flex-col bg-white  border-y-8 border-y-yellow-400 rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300">
+					</a>
+
+					<a
+						className="cursor-pointer mx-auto my-10 p-1 w-64 md:w-60 h-auto flex flex-col bg-white  border-y-8 border-y-yellow-400 rounded-lg shadow  hover:shadow-lg hover:shadow-slate-300"
+						href={`${PUBROUTES.BUY_PACK}/3`}
+					>
 						<h3 className="mx-auto my-3 text-center text-xl text-slate-600 flex flex-row font-courgette font-bold items-center">
 							Premium Pack
 						</h3>
@@ -201,12 +214,11 @@ const ProductsPacks = () => {
 							</span>
 							70,000
 						</p>
-					</div>
+					</a>
 				</div>
 			</div>
 			{/* <CustomerequestCard /> */}
 		</div>
 	);
 };
-
 export default ProductsPacks;

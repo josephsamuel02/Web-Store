@@ -15,7 +15,7 @@ const CustomerCare = () => {
 	];
 
 	return (
-		<div className="w-full bg-slate-100 h-screen ml-2  overflow-y-scroll ">
+		<div className="w-full bg-green-200 h-screen ml-2  overflow-y-scroll ">
 			<img
 				src="/2.png"
 				alt="customer care"
@@ -25,7 +25,7 @@ const CustomerCare = () => {
 			<div className="w-full h-full ">
 				{!selected && (
 					<div id="1" className="w-11/12 md:w-96 h-auto mx-auto mt-1 p-5   rounded-lg">
-						<h1 className="mx-auto p-1 text-2xl text-blue-900 font-bold font-dayone">
+						<h1 className="mx-auto p-1 text-2xl text-tabGreen font-bold font-dayone">
 							How can we help you
 						</h1>
 
@@ -37,8 +37,8 @@ const CustomerCare = () => {
 								{complaintsType &&
 									complaintsType.map((i, n) => (
 										<a
-											className="w-full h-20 mx-auto my-2 p-0  border-2 border-slate-300 hover:shadow-md hover:bg-blue-50 flex items-center rounded-md cursor-pointer "
-											style={{ backgroundColor: selectComplaint.id == i.complaint_id ? "lightblue" : "" }}
+											className="w-full h-20 mx-auto my-2 p-0  border-2 border-green-500 hover:shadow-md hover:bg-blue-50 flex items-center rounded-md cursor-pointer "
+											style={{ backgroundColor: selectComplaint.id == i.complaint_id ? "green" : "" }}
 											key={n}
 											onClick={() => {
 												setSelectComplaint({ id: i.complaint_id, text: `${i.complaint}` });
@@ -46,7 +46,12 @@ const CustomerCare = () => {
 											}}
 											href="#2"
 										>
-											<p className="mx-5 p-1 text-left text-xl text-slate-700 break-words font-roboto">
+											<p
+												className="mx-5 p-1 text-left text-xl text-slate-700 break-words font-roboto"
+												style={{
+													color: selectComplaint.id == i.complaint_id ? "white" : "",
+												}}
+											>
 												{i.complaint}
 											</p>
 										</a>
@@ -97,7 +102,7 @@ const CustomerCare = () => {
 						{!clearChatHistory && (
 							<>
 								{selectComplaint.text && (
-									<div className="mx-auto my-4 p-3 py-5 flex flex-row border-2 bg-blue-100 border-slate-300 rounded-md items-center">
+									<div className="mx-auto my-4 p-3 py-5 flex flex-row border-2 bg-blue-100 border-green-300 rounded-md items-center">
 										<h1 className="w-11/12 text-xl truncate text-slate-600 font-roboto ">
 											{selectComplaint.text}
 										</h1>
@@ -113,10 +118,10 @@ const CustomerCare = () => {
 							</>
 						)}
 						<div className="w-full h-80  my-2 border-2 bg-slate-100 rounded-lg overflow-y-scroll scrollbar-hide">
-							<p className=" my-3 mx-3 p-3  mr-10 break-words text-base text-black text-left float-left  bg-blue-300 border rounded-md">
+							<p className=" my-3 mx-3 p-3  mr-10 break-words text-base text-black text-left float-left  bg-green-300 border rounded-md">
 								Kindly drop your request below
 							</p>
-							<p className=" flex my-3 mx-3 ml-10 p-3   break-words text-base text-white   float-right bg-blue-600 border rounded-md">
+							<p className=" flex my-3 mx-3 ml-10 p-3   break-words text-base text-white   float-right bg-green-600 border rounded-md">
 								messages...
 							</p>
 						</div>
@@ -128,7 +133,7 @@ const CustomerCare = () => {
 								id=""
 								placeholder="message..."
 							></textarea>
-							<span className=" text-center text-white text-sm items-center font-roboto mx-1 px-3 py-2 rounded-sm bg-blue-600 hover:bg-blue-500 cursor-pointer">
+							<span className=" text-center text-white text-sm items-center font-roboto mx-1 px-3 py-2 rounded-sm bg-green-700 hover:bg-green-600 cursor-pointer">
 								Send
 							</span>
 						</div>

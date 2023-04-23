@@ -1,26 +1,24 @@
 import { Route, Routes } from "react-router-dom";
 import Page404 from "./Modules/Public/Pages/404_Page";
 import AboutUs from "./Modules/Public/Pages/Company Details/AboutUsPage";
-import AccountProfile from "./Modules/Public/Pages/Account/AccountProfilepage";
-import ClientsProducts from "./Modules/Public/Pages/ClientsProductPage/ClientsProductsPage";
+import AccountProfile from "./Modules/Public/Pages/Dashboard/Account/AccountProfilepage";
 import ContactUs from "./Modules/Public/Pages/Company Details/ContactUsPage";
 import Dashboard from "./Modules/Public/Pages/Dashboard/Dashboard";
 import LandingPage from "./Modules/Public/Pages/LandingPage/LandingPage";
-import PreferenceRequest from "./Modules/Public/Pages/PreferenceRequest/PreferenceRequest";
 import Products from "./Modules/Public/Pages/PreferenceRequest/ProductsPage";
-import Services from "./Modules/Public/Pages/Services/Services";
-import Login from "./Modules/Public/Pages/Auth/LogInPage";
-import SignUp from "./Modules/Public/Pages/Auth/SignUpPage";
+
 import TermsAndCons from "./Modules/Public/Pages/Company Details/TermsAndConditions";
 import WebsiteSamples from "./Modules/Public/Pages/WebsiteSamples/WebsiteSamples";
 import PUBROUTES from "./Modules/Public/PublicRoutes";
 import Main from "./Modules/Public/Pages/Dashboard/Main";
-import ClientTemplates from "./Modules/Public/Pages/ClientsProductPage/ClientTemplates";
-import AddOns from "./Modules/Public/Pages/ClientsProductPage/AddOns";
-import ClientsServices from "./Modules/Public/Pages/ClientsProductPage/ClientsServices";
-import CustomerCare from "./Modules/Public/Pages/Customer Care";
-import Invites from "./Modules/Public/Pages/Invites/Invites";
-import BuyPack from "./Modules/Public/Pages/Transactions/BuyPack";
+import AddOns from "./Modules/Public/Pages/Dashboard/ClientsProductPage/AddOns";
+
+import CustomerCare from "./Modules/Public/Pages/Dashboard/Customer Care";
+import Invites from "./Modules/Public/Pages/Dashboard/Invites/Invites";
+import BuyPack from "./Modules/Public/Pages/Dashboard/Transactions/BuyPack";
+import Login from "./Modules/Public/Pages/Auth/Login";
+import SignUp from "./Modules/Public/Pages/Auth/SignUp";
+import ManageStore from "./Modules/Public/Pages/Dashboard/Management/manageStore";
 
 const App = () => {
 	return (
@@ -33,18 +31,13 @@ const App = () => {
 
 				<Route path={PUBROUTES.DASHBOARD} element={<Dashboard />}>
 					<Route path={PUBROUTES.MAINMENUE} element={<Main />} />
-					<Route path={PUBROUTES.CLIENTS_WEBSITETEMPLATES} element={<ClientTemplates />} />
-					<Route path={PUBROUTES.CLIENTSPRODUCTPAGE} element={<ClientsProducts />} />
+					<Route path={`${PUBROUTES.BUY_PACK}/:id`} element={<BuyPack />} />
 					<Route path={PUBROUTES.CLIENTS_ADD_ONS} element={<AddOns />} />
-					<Route path={PUBROUTES.CLIENT_SERVICES} element={<ClientsServices />} />
-					<Route path={PUBROUTES.PREFERENCEREQUEST} element={<PreferenceRequest />} />
 					<Route path={PUBROUTES.ACCOUNTPROFILE} element={<AccountProfile />} />
 					<Route path={PUBROUTES.CUSTOMERCARE} element={<CustomerCare />} />
+					<Route path={PUBROUTES.MANAGE_STORE} element={<ManageStore />} />
 					<Route path={PUBROUTES.INVITES} element={<Invites />} />
 				</Route>
-
-				<Route path={PUBROUTES.SERVICES} element={<Services />} />
-				<Route path={PUBROUTES.BUY_PACK} element={<BuyPack />} />
 
 				<Route path={PUBROUTES.WEBSITESAMPLES} element={<WebsiteSamples />} />
 				<Route path={PUBROUTES.PRODUCTS} element={<Products />} />
